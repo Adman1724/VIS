@@ -109,6 +109,7 @@
   <ItemGroup>
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Profil.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,7 +135,24 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profil.aspx.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profil.aspx.designer.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Connective\Connective.csproj">
+      <Project>{5111c0cf-f7d9-4192-ace7-6cfac00b0293}</Project>
+      <Name>Connective</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MAJ0101\MAJ0101_Form.csproj">
+      <Project>{5599b8a8-e452-422d-8e29-19da1bf98032}</Project>
+      <Name>MAJ0101_Form</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

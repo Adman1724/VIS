@@ -13,7 +13,7 @@
         <div ID="loginTopText">Fitness APP - Client Login</div>
         <asp:TextBox ID="loginInput" class="loginInput" AutoCompleteType="Disabled" runat="server" placeholder="Email"></asp:TextBox>
         <asp:TextBox ID="passwordInput" class="loginInput" TextMode="Password" runat="server" placeholder="Password"></asp:TextBox>
-        <asp:Button ID="confirmButton" runat="server" Text="Login" />
+        <asp:Button ID="confirmButton" runat="server" Text="Login" OnClick="Button1_Click" />
 
     </div>
     </form>

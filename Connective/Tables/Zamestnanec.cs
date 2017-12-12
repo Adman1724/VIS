@@ -21,6 +21,8 @@ namespace Connective.Tables
         public int Group { get; set; }
         [System.ComponentModel.DefaultValue(null)]
         public Decimal IdProject { get; set; }
-        public String heslo { get; set; }
+        public String Heslo { get; set; }
+        public String Mail { get; set;  }
+
     }
 }

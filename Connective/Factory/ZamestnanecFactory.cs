@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class ZamestnanecFactory
+     public class  ZamestnanecFactory
     {
         public ZamestnanecGatewayInterface<Zamestnanec> GetZamestnanec()
         {

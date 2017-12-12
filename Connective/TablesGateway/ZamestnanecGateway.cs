@@ -32,11 +32,12 @@ namespace Connective.TablesGateway
         public String TABLE_NAME = "Zamestnanec";
         public String SQL_SELECT = "SELECT * FROM Zamestnanec";
         public String SQL_SELECT_ID = "SELECT * FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
-        public String SQL_UPDATE = "UPDATE Zamestnanec SET meno=@meno, priezvysko=@priezvisko, rodne_cislo=@rodne_cislo, bydlisko=@bydlisko, pohlavie=@pohlavie, skupina_id_skupiny=@id_skupiny, pracovisko_id_prcoviska=@id_pracoviska, Projekt_id_projekt=@id_projektu, heslo=@heslo  WHERE id_zamestnanca=@id_zamestnanca";
-        public String SQL_INSERT = "INSERT INTO Zamestnanec VALUES(@meno, @priezvisko, @rodne_cislo, @bydlisko, @pohlavie, @id_skupiny, @id_pracoviska, @id_projektu , @heslo)";
+        public String SQL_UPDATE = "UPDATE Zamestnanec SET meno=@meno, priezvysko=@priezvisko, rodne_cislo=@rodne_cislo, bydlisko=@bydlisko, pohlavie=@pohlavie, skupina_id_skupiny=@id_skupiny, pracovisko_id_prcoviska=@id_pracoviska, Projekt_id_projekt=@id_projektu, heslo=@heslo, mail=@mail  WHERE id_zamestnanca=@id_zamestnanca";
+        public String SQL_INSERT = "INSERT INTO Zamestnanec VALUES(@meno, @priezvisko, @rodne_cislo, @bydlisko, @pohlavie, @id_skupiny, @id_pracoviska, @id_projektu , @heslo, @mail)";
         public String SQL_DELETE = "DELETE FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
+        public String SQL_CHECK_LOGIN = "SELECT * FROM Zamestnanec WHERE mail=@mail AND heslo=@heslo";
 
-        public Zamestnanec Select(T t)
+        public T Select_id(int t)
 
         {
             Database db = new Database();
@@ -54,7 +55,7 @@ namespace Connective.TablesGateway
             }
             reader.Close();
             db.Close();
-            return purchase;
+            return (T)purchase;
         }
 
 
@@ -124,7 +125,11 @@ namespace Connective.TablesGateway
                 }
                 if (!reader.IsDBNull(++i))
                 {
-                    zamestnanec.heslo = reader.GetString(i);
+                    zamestnanec.Heslo = reader.GetString(i);
+                }
+                if (!reader.IsDBNull(++i))
+                {
+                    zamestnanec.Mail = reader.GetString(i);
                 }
 
 
@@ -159,7 +164,8 @@ namespace Connective.TablesGateway
             command.Parameters.AddWithValue("@id_skupiny", zamestnanec.Group);
             command.Parameters.AddWithValue("@id_pracoviska", zamestnanec.WorkGroup);
             command.Parameters.AddWithValue("@id_projektu", zamestnanec.IdProject);
-            command.Parameters.AddWithValue("@heslo", zamestnanec.heslo);
+            command.Parameters.AddWithValue("@heslo", zamestnanec.Heslo);
+            command.Parameters.AddWithValue("@mail", zamestnanec.Mail);
 
         }
         public string CheckEmp(int idUser, DateTime start, DateTime end, Database pDb)
@@ -341,6 +347,26 @@ namespace Connective.TablesGateway
             }
 
         }
+        public Zamestnanec CheckPassword(Zamestnanec zamestnanec)
+        {
+            Database db = new Database();
+            db.Connect();
+            SqlCommand command = db.CreateCommand(SQL_CHECK_LOGIN);
+            command.Parameters.AddWithValue("@mail", zamestnanec.Mail == null ? DBNull.Value : (object)zamestnanec.Mail);
+            command.Parameters.AddWithValue("@heslo", zamestnanec.Heslo);
+
+            SqlDataReader reader = db.Select(command);
+
+            Collection<T> clients = Read(reader);
+            db.Close();
+
+            if (clients.Count > 0)
+            {
+                return clients[0];
+            }
+            return null;
+        }
+
 
     }
 }

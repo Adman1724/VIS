@@ -25,3 +25,25 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+
+.centring{
+    display: block;
+    padding-left: 10%;
+}
+.content{
+    width:40%;
+}
+.header_text{
+    font-size: 25px;
+
+}
+.card_line{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.card_left_element{
+    float:left;
+}
+.card_right_eleent{
+    float:right
+}

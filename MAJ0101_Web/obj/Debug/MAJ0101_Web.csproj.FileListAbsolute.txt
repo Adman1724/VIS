@@ -31,3 +31,7 @@ E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\bin\Microsoft.CodeDom.Pr
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\obj\Debug\MAJ0101_Web.csprojResolveAssemblyReference.cache
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\obj\Debug\MAJ0101_Web.dll
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\obj\Debug\MAJ0101_Web.pdb
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\bin\Connective.exe
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\bin\Connective.pdb
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\bin\MAJ0101.exe
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101_Web\bin\MAJ0101.pdb
