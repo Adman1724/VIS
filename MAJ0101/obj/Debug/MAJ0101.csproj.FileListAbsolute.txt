@@ -1,0 +1,8 @@
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.exe.config
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.exe
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.pdb
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.csprojResolveAssemblyReference.cache
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Properties.Resources.resources
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.csproj.GenerateResource.Cache
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.exe
+E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.pdb

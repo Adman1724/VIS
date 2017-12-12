@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAJ0101_Form", "MAJ0101\MAJ0101_Form.csproj", "{5599B8A8-E452-422D-8E29-19DA1BF98032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connective", "Connective\Connective.csproj", "{5111C0CF-F7D9-4192-ACE7-6CFAC00B0293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5599B8A8-E452-422D-8E29-19DA1BF98032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5599B8A8-E452-422D-8E29-19DA1BF98032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5599B8A8-E452-422D-8E29-19DA1BF98032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5599B8A8-E452-422D-8E29-19DA1BF98032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5111C0CF-F7D9-4192-ACE7-6CFAC00B0293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5111C0CF-F7D9-4192-ACE7-6CFAC00B0293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5111C0CF-F7D9-4192-ACE7-6CFAC00B0293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5111C0CF-F7D9-4192-ACE7-6CFAC00B0293}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
