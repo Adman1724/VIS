@@ -9,3 +9,14 @@ E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Properties.Res
 E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormDetail.resources
 E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormGrid.resources
 E:\Skola\5.semester\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101_Form.csproj.GenerateResource.Cache
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.exe.config
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.exe
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.pdb
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.exe
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\MAJ0101.pdb
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101_Form.csprojResolveAssemblyReference.cache
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.Login.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Properties.Resources.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormDetail.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormGrid.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101_Form.csproj.GenerateResource.Cache
