@@ -31,6 +31,7 @@ namespace Connective.TablesGateway
         }
 
         public String TABLE_NAME = "hardware";
+        public String SQL_SELECT_ID = "SELECT FROM hardware WHERE nazov=@nazov";
         public String SQL_SELECT = "SELECT * FROM hardware";
         public String SQL_UPDATE = "UPDATE hardware SET nazov=@nazov, popis=@popis,ip_adresa=@ip,  pracovisko_id_prcoviska=@id_pracoviska WHERE id_hardware=@id_hardware";
         public String SQL_INSERT = "INSERT INTO hardware ( nazov, popis, ip_adresa, pracovisko_id_prcoviska)VALUES(@nazov,@popis, @ip, @id_pracoviska )";

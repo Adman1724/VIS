@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class HardwareFactory
+    public  class HardwareFactory
     {
         public HardwareGatewayInterface<Hardware> GetHardware()
         {

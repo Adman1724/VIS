@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class PoruchaFactory
+    public class PoruchaFactory
     {
         public PoruchaGatewayInterface<Porucha> GetPorucha()
         {

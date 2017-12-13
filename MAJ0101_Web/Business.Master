@@ -14,9 +14,9 @@
     <div>
         <div>
             <ul>
-                <li><a class="active" href="Home.aspx">Profil</a></li>
-                 <li><a href="#news">Neschopenky</a></li>
-                 <li><a href="Profil.aspx">Poruchy</a></li>
+                <li><a class="active" href="Profil.aspx">Profil</a></li>
+                 <li><a href="#">Neschopenky</a></li>
+                 <li><a href="Repair.aspx">Report Error</a></li>
                  <li><a href="#Neschopenky">Dochadzka</a></li>
         </ul>
         </div>

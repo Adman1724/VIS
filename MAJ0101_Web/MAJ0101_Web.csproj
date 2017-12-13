@@ -110,6 +110,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Profil.aspx" />
+    <Content Include="Repair.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -143,6 +144,13 @@
       <DependentUpon>Profil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repair.aspx.cs">
+      <DependentUpon>Repair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Repair.aspx.designer.cs">
+      <DependentUpon>Repair.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Connective\Connective.csproj">

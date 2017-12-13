@@ -44,6 +44,18 @@ li a:hover:not(.active) {
 .card_left_element{
     float:left;
 }
-.card_right_eleent{
+.card_right_element{
     float:right
+}
+.rateConfirmButton{
+    display:block;
+    
+    height: 30px;
+    width: 150px;
+    right: 20px;
+    justify-content: center;
+    background: #2DB870;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
