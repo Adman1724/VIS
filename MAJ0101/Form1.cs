@@ -16,6 +16,8 @@ namespace MAJ0101
         public Form1()
         {
             InitializeComponent();
+            Forms.Login form = new Forms.Login();
+            form.ShowDialog();
         }
 
         private void upravaToolStripMenuItem_Click(object sender, EventArgs e)
