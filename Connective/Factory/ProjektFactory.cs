@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class ProjektFactory
+    public class ProjektFactory
     {
         public ProjektGatewayInterface<Projekt> GetProjekt()
         {

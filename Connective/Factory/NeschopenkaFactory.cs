@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class NeschopenkaFactory
+    public class NeschopenkaFactory
     {
         public NeschopenkaGatewayInterface<Neschopenka> GetNechopenka()
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class PracoviskoFactory
+    public class PracoviskoFactory
     {
         public PracoviskoGatewayInterface<Pracovisko> GetPracovisko()
         {

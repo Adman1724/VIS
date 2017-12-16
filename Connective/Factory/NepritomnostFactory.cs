@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class NepritomnostFactory
+    public class NepritomnostFactory
     {
         public NepritomnostGatewayInterface<Nepritomnost> GetNepritomnost()
         {

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Connective.TablesGateway
 {
-    class ProjektGateway<T> : ProjektGatewayInterface<T>
+    public class ProjektGateway<T> : ProjektGatewayInterface<T>
         where T : Projekt
     {
         private static ProjektGateway<Projekt> instance;

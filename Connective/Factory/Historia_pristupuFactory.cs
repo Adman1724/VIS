@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class Historia_pristupuFactory
+    public class Historia_pristupuFactory
     {
-        public Historia_pristupuGatewayInterface<Historia_pristupu> GetNHistoria_pristupu()
+        public Historia_pristupuGatewayInterface<Historia_pristupu> GetHistoria_pristupu()
         {
             if (Configure.HISTORIA_PRISTUPUREAD == 0)
             {

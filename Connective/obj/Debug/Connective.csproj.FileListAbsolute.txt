@@ -4,5 +4,3 @@ E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\bin\Debug\Connective.exe
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\bin\Debug\Connective.pdb
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\obj\Debug\Connective.exe
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\obj\Debug\Connective.pdb
-E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\bin\Debug\MAJ0101.exe
-E:\Skola\5.semester\VIS\VIS\program\MAJ0101\Connective\bin\Debug\MAJ0101.pdb

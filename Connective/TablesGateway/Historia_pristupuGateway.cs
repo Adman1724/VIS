@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Connective.TablesGateway
 {
-    class Historia_pristupuGateway<T> : Historia_pristupuGatewayInterface<T>
+   public class Historia_pristupuGateway<T> : Historia_pristupuGatewayInterface<T>
         where T : Historia_pristupu
     {
         private static Historia_pristupuGateway<Historia_pristupu> instance;

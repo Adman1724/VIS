@@ -20,3 +20,13 @@ E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Properties
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormDetail.resources
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\FitnessForms.Templates.FormGrid.resources
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101_Form.csproj.GenerateResource.Cache
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormAktualny_stav.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormAddProject.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormAttendance.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormCreateProject.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormCreateZamestnanec.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormEditZamestnanc.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormEmpList.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormReportError.resources
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\Connective.exe
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\Connective.pdb

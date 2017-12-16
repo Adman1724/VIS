@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Factory
 {
-    class SkupinaFactory
+    public class SkupinaFactory
     {
         public SkupinaGatewayInterface<Skupina> GetSkupina()
         {

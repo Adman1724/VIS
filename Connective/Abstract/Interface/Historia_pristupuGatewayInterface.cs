@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Connective.Abstract.Interface
 {
-    interface Historia_pristupuGatewayInterface<T> : Gateway<T>
+   public interface Historia_pristupuGatewayInterface<T> : Gateway<T>
         where T : Historia_pristupu
     {
     }

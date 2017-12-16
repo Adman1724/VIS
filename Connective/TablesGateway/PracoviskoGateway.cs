@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Connective.TablesGateway
 {
-    class PracoviskoGateway<T> : PracoviskoGatewayInterface<T>
+    public class PracoviskoGateway<T> : PracoviskoGatewayInterface<T>
         where T : Pracovisko
     {
 
