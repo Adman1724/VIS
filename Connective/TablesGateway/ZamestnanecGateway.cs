@@ -32,6 +32,7 @@ namespace Connective.TablesGateway
         public String TABLE_NAME = "Zamestnanec";
         public String SQL_SELECT = "SELECT * FROM Zamestnanec";
         public String SQL_SELECT_ID = "SELECT * FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
+        public String SQL_SELECT_NAME = "SELECT * FROM Zamestnanec WHERE meno=@meno AND priezvysko=@priezvysko ";
         public String SQL_UPDATE = "UPDATE Zamestnanec SET meno=@meno, priezvysko=@priezvisko, rodne_cislo=@rodne_cislo, bydlisko=@bydlisko, pohlavie=@pohlavie, skupina_id_skupiny=@id_skupiny, pracovisko_id_prcoviska=@id_pracoviska, Projekt_id_projekt=@id_projektu, heslo=@heslo, mail=@mail  WHERE id_zamestnanca=@id_zamestnanca";
         public String SQL_INSERT = "INSERT INTO Zamestnanec VALUES(@meno, @priezvisko, @rodne_cislo, @bydlisko, @pohlavie, @id_skupiny, @id_pracoviska, @id_projektu , @heslo, @mail)";
         public String SQL_DELETE = "DELETE FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
@@ -45,6 +46,27 @@ namespace Connective.TablesGateway
             SqlCommand command = db.CreateCommand(SQL_SELECT_ID);
 
             command.Parameters.AddWithValue("@id_zamestnanca", t);
+            SqlDataReader reader = db.Select(command);
+
+            Collection<T> purchases = Read(reader);
+            Zamestnanec purchase = null;
+            if (purchases.Count == 1)
+            {
+                purchase = purchases[0];
+            }
+            reader.Close();
+            db.Close();
+            return (T)purchase;
+        }
+        public T Select_name(String name, String lastname)
+
+        {
+            Database db = new Database();
+            db.Connect();
+            SqlCommand command = db.CreateCommand(SQL_SELECT_NAME);
+            
+            command.Parameters.AddWithValue("@meno", name);
+            command.Parameters.AddWithValue("@priezvysko", lastname);
             SqlDataReader reader = db.Select(command);
 
             Collection<T> purchases = Read(reader);

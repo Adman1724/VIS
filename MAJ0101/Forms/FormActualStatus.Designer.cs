@@ -35,11 +35,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pracoviskoCombo = new System.Windows.Forms.ComboBox();
             this.gridAktivita = new System.Windows.Forms.DataGridView();
+            this.info = new System.Windows.Forms.Label();
+            this.Pracovisko = new System.Windows.Forms.Label();
             this.Meno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Priezvisko = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.info = new System.Windows.Forms.Label();
-            this.Pracovisko = new System.Windows.Forms.Label();
+            this.Pritomny = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridAktivita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +110,8 @@
             this.gridAktivita.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Meno,
             this.Priezvisko,
-            this.Status});
+            this.Status,
+            this.Pritomny});
             this.gridAktivita.Location = new System.Drawing.Point(43, 110);
             this.gridAktivita.Name = "gridAktivita";
             this.gridAktivita.ReadOnly = true;
@@ -120,6 +123,24 @@
             this.gridAktivita.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAktivita_CellContentClick);
             this.gridAktivita.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAktivita_CellDoubleClick);
             this.gridAktivita.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridAktivita_CellMouseDoubleClick);
+            // 
+            // info
+            // 
+            this.info.AutoSize = true;
+            this.info.Location = new System.Drawing.Point(520, 110);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(46, 17);
+            this.info.TabIndex = 7;
+            this.info.Text = "label1";
+            // 
+            // Pracovisko
+            // 
+            this.Pracovisko.AutoSize = true;
+            this.Pracovisko.Location = new System.Drawing.Point(40, 54);
+            this.Pracovisko.Name = "Pracovisko";
+            this.Pracovisko.Size = new System.Drawing.Size(77, 17);
+            this.Pracovisko.TabIndex = 8;
+            this.Pracovisko.Text = "Pracovisko";
             // 
             // Meno
             // 
@@ -142,29 +163,29 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
-            // info
+            // Pritomny
             // 
-            this.info.AutoSize = true;
-            this.info.Location = new System.Drawing.Point(520, 110);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(46, 17);
-            this.info.TabIndex = 7;
-            this.info.Text = "label1";
+            this.Pritomny.HeaderText = "Pritomny";
+            this.Pritomny.Name = "Pritomny";
+            this.Pritomny.ReadOnly = true;
+            this.Pritomny.Text = "Pritomny";
             // 
-            // Pracovisko
+            // button1
             // 
-            this.Pracovisko.AutoSize = true;
-            this.Pracovisko.Location = new System.Drawing.Point(40, 54);
-            this.Pracovisko.Name = "Pracovisko";
-            this.Pracovisko.Size = new System.Drawing.Size(77, 17);
-            this.Pracovisko.TabIndex = 8;
-            this.Pracovisko.Text = "Pracovisko";
+            this.button1.Location = new System.Drawing.Point(523, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Potvrdit Evidenciu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // FormAktualny_stav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 539);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Pracovisko);
             this.Controls.Add(this.info);
             this.Controls.Add(this.gridAktivita);
@@ -192,10 +213,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox pracoviskoCombo;
         private System.Windows.Forms.DataGridView gridAktivita;
+        private System.Windows.Forms.Label info;
+        private System.Windows.Forms.Label Pracovisko;
         private System.Windows.Forms.DataGridViewTextBoxColumn Meno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Priezvisko;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Label info;
-        private System.Windows.Forms.Label Pracovisko;
+        private System.Windows.Forms.DataGridViewButtonColumn Pritomny;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -31,14 +31,12 @@ namespace MAJ0101.Forms
             pracoviskoCombo_Load();
         
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void show()
         {
-           
             string a;
-            
-            
-           
+
+
+
             Collection<Active> active = new Collection<Active>();
             foreach (var i in pracovisko)
             {
@@ -48,7 +46,7 @@ namespace MAJ0101.Forms
                     ZamestnanecGateway<Zamestnanec> zg = (ZamestnanecGateway<Zamestnanec>)zamestnanecFactory.GetZamestnanec();
                     a = zg.AktualnePritomny(i.RecordId, null);
 
-                    
+
                     string[] words = a.Split(';');
                     foreach (var word in words)
                     {
@@ -60,30 +58,36 @@ namespace MAJ0101.Forms
                         {
                             if (counter == 0)
                             {
-                                t.Name = word1;  
+                                t.Name = word1;
                             }
-                            if(counter == 1)
+                            if (counter == 1)
                             {
                                 t.Surname = word1;
                             }
-                            if(counter == 2)
-                           {
+                            if (counter == 2)
+                            {
                                 t.State = word1;
                                 b = true;
                             }
-                            
+
                             counter++;
                         }
-                       if(b) active.Add(t);
+                        if (b) active.Add(t);
                     }
-                    
+
                 }
-                
+
 
             }
             BindingList<Active> Bactive = new BindingList<Active>(active);
             gridAktivita.AutoGenerateColumns = false;
             gridAktivita.DataSource = Bactive;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            show();
 
         }
 
@@ -215,11 +219,94 @@ namespace MAJ0101.Forms
 
         private void gridAktivita_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (gridAktivita.Columns[e.ColumnIndex].Name == "Pritomny")
+            {
+                ZamestnanecFactory zamestnanecFactory = new ZamestnanecFactory();
+                ZamestnanecGateway<Zamestnanec> zg = (ZamestnanecGateway<Zamestnanec>)zamestnanecFactory.GetZamestnanec();
+                zamestananec = zg.Select();
+                Active t = GetSelectedData();
+                DateTime date1= DateTime.Now;
+
+                foreach (var i in zamestananec)
+                {   
+                    if (t.Name.Equals(i.Name, StringComparison.Ordinal) && t.Surname.Equals(i.LastName, StringComparison.Ordinal))
+                    {
+                        Historia_pristupuFactory historia_pristupuFactory = new Historia_pristupuFactory();
+                        Historia_pristupuGateway<Historia_pristupu> hg = (Historia_pristupuGateway<Historia_pristupu>)historia_pristupuFactory.GetHistoria_pristupu();
+                        Historia_pristupu h = new Historia_pristupu(date1, i.RecordId, 37);
+                        hg.Insert(h);
+                        show();
+
+                    }
+
+                }
+
+            }
 
         }
 
         private void FormAktualny_stav_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            string a;
+
+
+
+            Collection<Active> active = new Collection<Active>();
+            foreach (var i in pracovisko)
+            {
+                if (i.Name.Equals(pracoviskoCombo.Text, StringComparison.Ordinal))
+                {
+                    ZamestnanecFactory zamestnanecFactory = new ZamestnanecFactory();
+                    ZamestnanecGateway<Zamestnanec> zg = (ZamestnanecGateway<Zamestnanec>)zamestnanecFactory.GetZamestnanec();
+                    a = zg.AktualnePritomny(i.RecordId, null);
+
+
+                    string[] words = a.Split(';');
+                    foreach (var word in words)
+                    {
+                        string[] words2 = word.Split(',');
+                        int counter = 0;
+                        bool b = false;
+                        Active t = new Active();
+                        foreach (var word1 in words2)
+                        {
+                            if (counter == 0)
+                            {
+                                t.Name = word1;
+                            }
+                            if (counter == 1)
+                            {
+                                t.Surname = word1;
+                            }
+                            if (counter == 2)
+                            {
+                                t.State = word1;
+                                if (t.State == "Nepritomny")
+                                {
+                                    NepritomnostFactory nepritomnostFactory = new NepritomnostFactory();
+                                    NepritomnostGateway<Nepritomnost> ng = (NepritomnostGateway<Nepritomnost>)nepritomnostFactory.GetNepritomnost();
+                                    Zamestnanec z=zg.Select_name(t.Name, t.Surname);
+                                    Nepritomnost n = new Nepritomnost(z.RecordId, DateTime.Now);
+                                    ng.Insert(n);
+                                }
+                                b = true;
+                            }
+
+                            counter++;
+                        }
+                        if (b) active.Add(t);
+                    }
+
+                }
+
+
+            }
+           
 
         }
     }

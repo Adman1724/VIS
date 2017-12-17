@@ -12,5 +12,15 @@ namespace Connective.Tables
         public override int RecordId { get; set; }
         public int Zamestnanec { get; set; }
         public DateTime Datum { get; set; }
+        public Nepritomnost() { }
+        public Nepritomnost(int id, DateTime date)
+        {
+            this.Datum = date;
+            this.RecordId = id;
+
+        }
+        
+
+        }
     } 
-}
+
