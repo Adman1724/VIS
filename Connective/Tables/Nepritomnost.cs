@@ -13,10 +13,11 @@ namespace Connective.Tables
         public int Zamestnanec { get; set; }
         public DateTime Datum { get; set; }
         public Nepritomnost() { }
-        public Nepritomnost(int id, DateTime date)
+        public Nepritomnost(int id,int id_z, DateTime date)
         {
-            this.Datum = date;
             this.RecordId = id;
+            this.Datum = date;
+            this.Zamestnanec = id_z;
 
         }
         

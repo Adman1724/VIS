@@ -19,6 +19,7 @@
                </div>
             <div class="cardLine">
                    <asp:Label CssClass="card_left_element" ID="Label9" runat="server" Text="Personal ID Number"></asp:Label>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    <asp:TextBox CssClass="card_right_element" ID="perIdNumElement" Enabled="false" Text="" runat="server"></asp:TextBox>
                </div>
                

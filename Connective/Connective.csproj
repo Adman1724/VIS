@@ -90,13 +90,21 @@
     <Compile Include="Tables\Projekt.cs" />
     <Compile Include="Tables\Skupina.cs" />
     <Compile Include="Tables\Zamestnanec.cs" />
+    <Compile Include="XMLGateway\HardwareXMLGateway.cs" />
+    <Compile Include="XMLGateway\Historia_pristupuXMLGateway.cs" />
+    <Compile Include="XMLGateway\NepritomnostXMLGateway.cs" />
+    <Compile Include="XMLGateway\NeschopenkaXMLGateway.cs" />
+    <Compile Include="XMLGateway\Paths.cs" />
+    <Compile Include="XMLGateway\PoruchaXMLGateway.cs" />
+    <Compile Include="XMLGateway\PracoviskoXMLGateway.cs" />
+    <Compile Include="XMLGateway\ProjektXMLGateway.cs" />
+    <Compile Include="XMLGateway\SkupinaXMLGateway.cs" />
+    <Compile Include="XMLGateway\ZamestnanecXMLGateway.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="XMLGateway\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

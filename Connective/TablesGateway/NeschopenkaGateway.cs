@@ -33,7 +33,7 @@ namespace Connective.TablesGateway
         public String TABLE_NAME = "Neschopenka";
         public String SQL_SELECT = "SELECT * FROM Neschopenka";
         public String SQL_UPDATE = "UPDATE Neschopenka SET text=@text WHERE id_neschopenka=@id_neschopenka";
-        public String SQL_INSERT = "INSERT INTO Neschopenka ( datum, Nepritomnost_id_nepritomnost, text)VALUES(@datum,@nepritomnost, @text )";
+        public String SQL_INSERT = "INSERT INTO Neschopenka ( id_neschopenka,datum, Nepritomnost_id_nepritomnost, text)VALUES(@id_neschopenka,@datum,@nepritomnost, @text )";
         public String SQL_DELETE = "DELETE FROM Neschopenka WHERE id_neschopenka=@id_neschopenka";
 
         public int Insert(T t)
@@ -80,8 +80,9 @@ namespace Connective.TablesGateway
                 int i = -1;
                 neschopenka.RecordId = reader.GetInt32(++i);
                 neschopenka.Datum= reader.GetDateTime(++i);
-                neschopenka.Text = reader.GetString(++i);
+               
                 neschopenka.Nepritomnost = reader.GetInt32(++i);
+                neschopenka.Text = reader.GetString(++i);
 
 
 

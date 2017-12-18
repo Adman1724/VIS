@@ -15,9 +15,9 @@
         <div>
             <ul>
                 <li><a class="active" href="Profil.aspx">Profil</a></li>
-                 <li><a href="#">Neschopenky</a></li>
+                 <li><a href="Sick.aspx">Sick Note</a></li>
                  <li><a href="Repair.aspx">Report Error</a></li>
-                 <li><a href="#Neschopenky">Dochadzka</a></li>
+                 <li><a href="List.aspx">Attendance</a></li>
         </ul>
         </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

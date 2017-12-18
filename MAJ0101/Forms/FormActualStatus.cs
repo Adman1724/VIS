@@ -291,7 +291,19 @@ namespace MAJ0101.Forms
                                     NepritomnostFactory nepritomnostFactory = new NepritomnostFactory();
                                     NepritomnostGateway<Nepritomnost> ng = (NepritomnostGateway<Nepritomnost>)nepritomnostFactory.GetNepritomnost();
                                     Zamestnanec z=zg.Select_name(t.Name, t.Surname);
-                                    Nepritomnost n = new Nepritomnost(z.RecordId, DateTime.Now);
+                                    Collection<Nepritomnost> za = ng.Select();
+                                    
+                                    int id = 0;
+                                    foreach(var nep in za)
+                                    {
+                                        if (nep.RecordId > id)
+                                        {
+                                            id = nep.RecordId;
+
+                                        }
+                                    }
+                                    id++;
+                                    Nepritomnost n = new Nepritomnost(id,z.RecordId, DateTime.Now);
                                     ng.Insert(n);
                                 }
                                 b = true;

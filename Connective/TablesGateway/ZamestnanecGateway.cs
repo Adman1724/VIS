@@ -33,8 +33,8 @@ namespace Connective.TablesGateway
         public String SQL_SELECT = "SELECT * FROM Zamestnanec";
         public String SQL_SELECT_ID = "SELECT * FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
         public String SQL_SELECT_NAME = "SELECT * FROM Zamestnanec WHERE meno=@meno AND priezvysko=@priezvysko ";
-        public String SQL_UPDATE = "UPDATE Zamestnanec SET meno=@meno, priezvysko=@priezvisko, rodne_cislo=@rodne_cislo, bydlisko=@bydlisko, pohlavie=@pohlavie, skupina_id_skupiny=@id_skupiny, pracovisko_id_prcoviska=@id_pracoviska, Projekt_id_projekt=@id_projektu, heslo=@heslo, mail=@mail  WHERE id_zamestnanca=@id_zamestnanca";
-        public String SQL_INSERT = "INSERT INTO Zamestnanec VALUES(@meno, @priezvisko, @rodne_cislo, @bydlisko, @pohlavie, @id_skupiny, @id_pracoviska, @id_projektu , @heslo, @mail)";
+        public String SQL_UPDATE = "UPDATE Zamestnanec SET meno=@meno, priezvysko=@priezvisko, rodne_cislo=@rodne_cislo, bydlisko=@bydlisko, pohlavie=@pohlavie, skupina_id_skupiny=@id_skupiny, pracovisko_id_prcoviska=@id_pracoviska, Projekt_id_projekt=@id_projektu, heslo=@heslo, mail=@mail, Vypis=@vypis WHERE id_zamestnanca=@id_zamestnanca";
+        public String SQL_INSERT = "INSERT INTO Zamestnanec VALUES(@meno, @priezvisko, @rodne_cislo, @bydlisko, @pohlavie, @id_skupiny, @id_pracoviska, @id_projektu , @heslo, @mail )";
         public String SQL_DELETE = "DELETE FROM Zamestnanec WHERE id_zamestnanca=@id_zamestnanca";
         public String SQL_CHECK_LOGIN = "SELECT * FROM Zamestnanec WHERE mail=@mail AND heslo=@heslo";
 
@@ -188,6 +188,7 @@ namespace Connective.TablesGateway
             command.Parameters.AddWithValue("@id_projektu", zamestnanec.IdProject);
             command.Parameters.AddWithValue("@heslo", zamestnanec.Heslo);
             command.Parameters.AddWithValue("@mail", zamestnanec.Mail);
+            command.Parameters.AddWithValue("@vypis", zamestnanec.Vypis);
 
         }
         public string CheckEmp(int idUser, DateTime start, DateTime end, Database pDb)

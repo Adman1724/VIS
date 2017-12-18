@@ -32,8 +32,8 @@ namespace Connective.TablesGateway
 
         public String TABLE_NAME = "Nepritomnost";
         public String SQL_SELECT = "SELECT * FROM Nepritomnost";
-        
-        public String SQL_INSERT = "INSERT INTO Nepritomnost ( Zamestnanec_id_zamestnanca, datum)VALUES(@zamestnanec,@datum )";
+        public String SQL_SELECT_ID_ZAM = "SELECT * FROM Nepritomnost where Zamestnanec_id_zamestnanca=@zamestnanec";
+        public String SQL_INSERT = "INSERT INTO Nepritomnost ( id_nepritomnost,Zamestnanec_id_zamestnanca, datum)VALUES(@id_nepritomnost,@zamestnanec,@datum )";
         public String SQL_DELETE = "DELETE FROM Nepritomnost WHERE id_nepritomnost=@id_nepritomnost";
 
         public int Insert(T t)
@@ -64,6 +64,20 @@ namespace Connective.TablesGateway
             db.Close();
             return Nepritomnosts;
         }
+        public Collection<T> Select_id_zam( int id)
+        {
+            Database db = new Database();
+            db.Connect();
+
+            SqlCommand command = db.CreateCommand(SQL_SELECT_ID_ZAM);
+            command.Parameters.AddWithValue("@zamestnanec", id);
+            SqlDataReader reader = db.Select(command);
+
+            Collection<T> Nepritomnosts = Read(reader, true);
+            reader.Close();
+            db.Close();
+            return Nepritomnosts;
+        }
 
         private Collection<T> Read(SqlDataReader reader, bool withItemsCount = false)
         {
@@ -74,9 +88,9 @@ namespace Connective.TablesGateway
                 Nepritomnost nepritomnost = new Nepritomnost();
                 int i = -1;
                 nepritomnost.RecordId = reader.GetInt32(++i);
-                nepritomnost.Datum= reader.GetDateTime(++i);
+               
                 nepritomnost.Zamestnanec = reader.GetInt32(++i);
-
+                nepritomnost.Datum = reader.GetDateTime(++i);
 
 
 

@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="List.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -111,10 +112,12 @@
     <Content Include="Login.aspx" />
     <Content Include="Profil.aspx" />
     <Content Include="Repair.aspx" />
+    <Content Include="Sick.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Active.cs" />
     <Compile Include="Business.Master.cs">
       <DependentUpon>Business.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +131,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -151,6 +161,14 @@
     <Compile Include="Repair.aspx.designer.cs">
       <DependentUpon>Repair.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Sick.aspx.cs">
+      <DependentUpon>Sick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sick.aspx.designer.cs">
+      <DependentUpon>Sick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SickNote.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Connective\Connective.csproj">

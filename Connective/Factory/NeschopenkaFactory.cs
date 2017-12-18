@@ -11,7 +11,7 @@ namespace Connective.Factory
 {
     public class NeschopenkaFactory
     {
-        public NeschopenkaGatewayInterface<Neschopenka> GetNechopenka()
+        public NeschopenkaGatewayInterface<Neschopenka> GetNeschopenka()
         {
             if (Configure.NESCHOPENKAREAD == 0)
             {

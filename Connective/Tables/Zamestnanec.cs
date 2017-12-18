@@ -23,7 +23,8 @@ namespace Connective.Tables
         public Decimal IdProject { get; set; }
         public String Heslo { get; set; }
         public String Mail { get; set;  }
-        public Zamestnanec(int record, string mail, string pass)
+        public int Vypis { get; set; }
+        public Zamestnanec( int record, string mail, string pass)
         {
             this.RecordId = record;
             this.Mail = mail;
