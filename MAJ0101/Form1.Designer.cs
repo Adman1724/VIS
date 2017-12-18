@@ -39,6 +39,7 @@
             this.upravaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pridanieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mojProfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupHardwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,14 +91,15 @@
             // pridanieToolStripMenuItem
             // 
             this.pridanieToolStripMenuItem.Name = "pridanieToolStripMenuItem";
-            this.pridanieToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.pridanieToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.pridanieToolStripMenuItem.Text = "Pridanie";
             this.pridanieToolStripMenuItem.Click += new System.EventHandler(this.pridanieToolStripMenuItem_Click);
             // 
             // spravaDomenyToolStripMenuItem
             // 
             this.spravaDomenyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zamestnanciToolStripMenuItem});
+            this.zamestnanciToolStripMenuItem,
+            this.backupHardwareToolStripMenuItem});
             this.spravaDomenyToolStripMenuItem.Name = "spravaDomenyToolStripMenuItem";
             this.spravaDomenyToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.spravaDomenyToolStripMenuItem.Text = "Sprava domeny";
@@ -108,7 +110,7 @@
             this.upravaToolStripMenuItem2,
             this.pridanieToolStripMenuItem1});
             this.zamestnanciToolStripMenuItem.Name = "zamestnanciToolStripMenuItem";
-            this.zamestnanciToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.zamestnanciToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.zamestnanciToolStripMenuItem.Text = "Zamestnanci";
             // 
             // upravaToolStripMenuItem2
@@ -130,6 +132,13 @@
             this.mojProfilToolStripMenuItem.Name = "mojProfilToolStripMenuItem";
             this.mojProfilToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.mojProfilToolStripMenuItem.Text = "Moj profil";
+            // 
+            // backupHardwareToolStripMenuItem
+            // 
+            this.backupHardwareToolStripMenuItem.Name = "backupHardwareToolStripMenuItem";
+            this.backupHardwareToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.backupHardwareToolStripMenuItem.Text = "Backup Hardware";
+            this.backupHardwareToolStripMenuItem.Click += new System.EventHandler(this.backupHardwareToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -161,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem zamestnanciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem upravaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem pridanieToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem backupHardwareToolStripMenuItem;
     }
 }
 

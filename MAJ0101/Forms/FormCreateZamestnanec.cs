@@ -38,6 +38,9 @@ namespace MAJ0101.Forms
                 z.LastName = "";
                 z.Adress = "";
             z.PerIdNum = 0;
+            z.Mail = "";
+            z.Heslo = "";
+            z.Vypis = 0;
             groupC();
             workC();
             projectC();
@@ -63,6 +66,26 @@ namespace MAJ0101.Forms
             try
             {
                 z.PerIdNum = Convert.ToInt32(textPerId.Text);
+            }
+            catch (Exception h)
+            {
+                MessageBox.Show("Prosim píste len cisla");
+            }
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            z.Heslo = textBox2.Text;
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            z.Mail = textBox1.Text;
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                z.Vypis = Convert.ToInt32(textBox3.Text);
             }
             catch (Exception h)
             {
@@ -139,6 +162,10 @@ namespace MAJ0101.Forms
 
                 }
             }
+            z.Sex = comboSex.Text;
+            z.Mail = textBox1.Text;
+            z.Heslo = textBox2.Text;
+            z.Vypis = Convert.ToInt32(textBox3.Text);
             bool vall = true;
             string a = "";
             if(z.Name.Equals(a))
@@ -190,7 +217,25 @@ namespace MAJ0101.Forms
                 vall = false;
             }
             else pohl.Text = "";
-           z.Sex = comboSex.Text;
+            if (z.Mail.Equals(a))
+            {
+                lmail.Text = "Prosim zadajte Mail";
+                vall = false;
+            }
+            else lmail.Text = "";
+            if (z.Heslo.Equals(a))
+            {
+                lheslo.Text = "Prosim zadajte heslo";
+                vall = false;
+            }
+            else lheslo.Text = "";
+            if (z.Vypis==0)
+            {
+                lvypis.Text = "Prosim zadajte priezvisko";
+                vall = false;
+            }
+            else lvypis.Text = "";
+         
             if (vall)
             {
                 ZamestnanecFactory zamestnanecFactory = new ZamestnanecFactory();
@@ -204,6 +249,11 @@ namespace MAJ0101.Forms
         }
 
         private void FormCreateZamestnanec_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

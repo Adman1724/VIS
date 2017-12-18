@@ -85,10 +85,10 @@ namespace Connective.TablesGateway
             SqlCommand command = db.CreateCommand(SQL_SELECT);
             SqlDataReader reader = db.Select(command);
 
-            Collection<T> Projekts = Read(reader, true);
+            Collection<T> projekts = Read(reader, true);
             reader.Close();
             db.Close();
-            return Projekts;
+            return projekts;
         }
 
         private static Collection<T> Read(SqlDataReader reader, bool withItemsCount = false)
@@ -100,7 +100,7 @@ namespace Connective.TablesGateway
                 Projekt projekt = new Projekt();
                 int i = -1;
 
-                projekt.RecordId = reader.GetInt32(++i);
+                projekt.RecordId =(int)reader.GetDecimal(++i);
                 if (!reader.IsDBNull(++i))
                 {
                     projekt.Name = reader.GetString(i);

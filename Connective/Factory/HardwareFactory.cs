@@ -1,6 +1,7 @@
 ﻿using Connective.Abstract.Interface;
 using Connective.Tables;
 using Connective.TablesGateway;
+using Connective.XMLGateway;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,11 @@ namespace Connective.Factory
             {
                 return HardwareGateway<Hardware>.Instance;
             }
-            /* else
+             else
              {
-                 return ZamestnanecXMLGateway<Zamestnanec>.instance;
-             }*/
-            return HardwareGateway<Hardware>.Instance;
+                 return HardwareXMLGateway<Hardware>.Instance;
+             }
+            
 
         }
     }

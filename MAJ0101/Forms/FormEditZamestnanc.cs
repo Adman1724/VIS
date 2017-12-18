@@ -69,6 +69,8 @@ namespace MAJ0101.Forms
             zamestnanec.Adress = tadresa.Text;
             zamestnanec.PerIdNum = Int32.Parse( trodnecislo.Text);
              zamestnanec.Sex= tpohlavie.Text;
+            zamestnanec.Heslo = textBox2.Text;
+            zamestnanec.Vypis = Int32.Parse(textBox3.Text);
             return true;
         }
 
@@ -117,6 +119,21 @@ namespace MAJ0101.Forms
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projekt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

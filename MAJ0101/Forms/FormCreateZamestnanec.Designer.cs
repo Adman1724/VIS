@@ -37,10 +37,6 @@
             this.group = new System.Windows.Forms.Label();
             this.workgroup = new System.Windows.Forms.Label();
             this.project = new System.Windows.Forms.Label();
-            this.comboGroup = new System.Windows.Forms.ComboBox();
-            this.comboWork = new System.Windows.Forms.ComboBox();
-            this.comboProject = new System.Windows.Forms.ComboBox();
-            this.comboSex = new System.Windows.Forms.ComboBox();
             this.textName = new System.Windows.Forms.TextBox();
             this.textLast = new System.Windows.Forms.TextBox();
             this.textAddress = new System.Windows.Forms.TextBox();
@@ -49,15 +45,31 @@
             this.prie = new System.Windows.Forms.Label();
             this.adre = new System.Windows.Forms.Label();
             this.rodn = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboGroup = new System.Windows.Forms.ComboBox();
+            this.comboWork = new System.Windows.Forms.ComboBox();
+            this.comboProject = new System.Windows.Forms.ComboBox();
+            this.comboSex = new System.Windows.Forms.ComboBox();
             this.pohl = new System.Windows.Forms.Label();
             this.gru = new System.Windows.Forms.Label();
             this.work = new System.Windows.Forms.Label();
             this.ptoj = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lvypis = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lmail = new System.Windows.Forms.Label();
+            this.lheslo = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 411);
+            this.button1.Location = new System.Drawing.Point(208, 550);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -137,45 +149,6 @@
             this.project.TabIndex = 8;
             this.project.Text = "Projekt";
             // 
-            // comboGroup
-            // 
-            this.comboGroup.FormattingEnabled = true;
-            this.comboGroup.Location = new System.Drawing.Point(194, 262);
-            this.comboGroup.Name = "comboGroup";
-            this.comboGroup.Size = new System.Drawing.Size(121, 24);
-            this.comboGroup.TabIndex = 9;
-            this.comboGroup.SelectedIndexChanged += new System.EventHandler(this.comboGroup_SelectedIndexChanged);
-            // 
-            // comboWork
-            // 
-            this.comboWork.FormattingEnabled = true;
-            this.comboWork.Location = new System.Drawing.Point(194, 308);
-            this.comboWork.Name = "comboWork";
-            this.comboWork.Size = new System.Drawing.Size(121, 24);
-            this.comboWork.TabIndex = 10;
-            this.comboWork.SelectedIndexChanged += new System.EventHandler(this.comboWork_SelectedIndexChanged);
-            // 
-            // comboProject
-            // 
-            this.comboProject.FormattingEnabled = true;
-            this.comboProject.Location = new System.Drawing.Point(194, 354);
-            this.comboProject.Name = "comboProject";
-            this.comboProject.Size = new System.Drawing.Size(121, 24);
-            this.comboProject.TabIndex = 11;
-            this.comboProject.SelectedIndexChanged += new System.EventHandler(this.comboProject_SelectedIndexChanged);
-            // 
-            // comboSex
-            // 
-            this.comboSex.FormattingEnabled = true;
-            this.comboSex.Items.AddRange(new object[] {
-            "muž",
-            "žena"});
-            this.comboSex.Location = new System.Drawing.Point(194, 214);
-            this.comboSex.Name = "comboSex";
-            this.comboSex.Size = new System.Drawing.Size(121, 24);
-            this.comboSex.TabIndex = 12;
-            this.comboSex.SelectedIndexChanged += new System.EventHandler(this.comboSex_SelectedIndexChanged);
-            // 
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(194, 32);
@@ -244,11 +217,92 @@
             this.rodn.Size = new System.Drawing.Size(0, 17);
             this.rodn.TabIndex = 20;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 406);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Mail";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(194, 446);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 22);
+            this.textBox2.TabIndex = 27;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(194, 484);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(121, 22);
+            this.textBox3.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(77, 446);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Heslo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(77, 484);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Vypis";
+            // 
+            // comboGroup
+            // 
+            this.comboGroup.FormattingEnabled = true;
+            this.comboGroup.Location = new System.Drawing.Point(194, 262);
+            this.comboGroup.Name = "comboGroup";
+            this.comboGroup.Size = new System.Drawing.Size(121, 24);
+            this.comboGroup.TabIndex = 9;
+            this.comboGroup.SelectedIndexChanged += new System.EventHandler(this.comboGroup_SelectedIndexChanged);
+            // 
+            // comboWork
+            // 
+            this.comboWork.FormattingEnabled = true;
+            this.comboWork.Location = new System.Drawing.Point(194, 305);
+            this.comboWork.Name = "comboWork";
+            this.comboWork.Size = new System.Drawing.Size(121, 24);
+            this.comboWork.TabIndex = 10;
+            this.comboWork.SelectedIndexChanged += new System.EventHandler(this.comboWork_SelectedIndexChanged);
+            // 
+            // comboProject
+            // 
+            this.comboProject.FormattingEnabled = true;
+            this.comboProject.Location = new System.Drawing.Point(194, 354);
+            this.comboProject.Name = "comboProject";
+            this.comboProject.Size = new System.Drawing.Size(121, 24);
+            this.comboProject.TabIndex = 11;
+            this.comboProject.SelectedIndexChanged += new System.EventHandler(this.comboProject_SelectedIndexChanged);
+            // 
+            // comboSex
+            // 
+            this.comboSex.FormattingEnabled = true;
+            this.comboSex.Items.AddRange(new object[] {
+            "muž",
+            "žena"});
+            this.comboSex.Location = new System.Drawing.Point(194, 214);
+            this.comboSex.Name = "comboSex";
+            this.comboSex.Size = new System.Drawing.Size(121, 24);
+            this.comboSex.TabIndex = 12;
+            this.comboSex.SelectedIndexChanged += new System.EventHandler(this.comboSex_SelectedIndexChanged);
+            // 
             // pohl
             // 
             this.pohl.AutoSize = true;
             this.pohl.ForeColor = System.Drawing.Color.DarkRed;
-            this.pohl.Location = new System.Drawing.Point(348, 220);
+            this.pohl.Location = new System.Drawing.Point(342, 214);
             this.pohl.Name = "pohl";
             this.pohl.Size = new System.Drawing.Size(0, 17);
             this.pohl.TabIndex = 21;
@@ -257,7 +311,7 @@
             // 
             this.gru.AutoSize = true;
             this.gru.ForeColor = System.Drawing.Color.DarkRed;
-            this.gru.Location = new System.Drawing.Point(345, 262);
+            this.gru.Location = new System.Drawing.Point(332, 262);
             this.gru.Name = "gru";
             this.gru.Size = new System.Drawing.Size(0, 17);
             this.gru.TabIndex = 22;
@@ -266,7 +320,7 @@
             // 
             this.work.AutoSize = true;
             this.work.ForeColor = System.Drawing.Color.DarkRed;
-            this.work.Location = new System.Drawing.Point(351, 314);
+            this.work.Location = new System.Drawing.Point(332, 308);
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(0, 17);
             this.work.TabIndex = 23;
@@ -275,16 +329,89 @@
             // 
             this.ptoj.AutoSize = true;
             this.ptoj.ForeColor = System.Drawing.Color.DarkRed;
-            this.ptoj.Location = new System.Drawing.Point(354, 360);
+            this.ptoj.Location = new System.Drawing.Point(332, 357);
             this.ptoj.Name = "ptoj";
             this.ptoj.Size = new System.Drawing.Size(0, 17);
             this.ptoj.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(194, 406);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 22);
+            this.textBox1.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
+            this.label6.Location = new System.Drawing.Point(273, 322);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 34;
+            // 
+            // lvypis
+            // 
+            this.lvypis.AutoSize = true;
+            this.lvypis.ForeColor = System.Drawing.Color.DarkRed;
+            this.lvypis.Location = new System.Drawing.Point(332, 484);
+            this.lvypis.Name = "lvypis";
+            this.lvypis.Size = new System.Drawing.Size(0, 17);
+            this.lvypis.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(270, 276);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.TabIndex = 33;
+            // 
+            // lmail
+            // 
+            this.lmail.AutoSize = true;
+            this.lmail.ForeColor = System.Drawing.Color.DarkRed;
+            this.lmail.Location = new System.Drawing.Point(332, 406);
+            this.lmail.Name = "lmail";
+            this.lmail.Size = new System.Drawing.Size(0, 17);
+            this.lmail.TabIndex = 31;
+            // 
+            // lheslo
+            // 
+            this.lheslo.AutoSize = true;
+            this.lheslo.ForeColor = System.Drawing.Color.DarkRed;
+            this.lheslo.Location = new System.Drawing.Point(338, 451);
+            this.lheslo.Name = "lheslo";
+            this.lheslo.Size = new System.Drawing.Size(0, 17);
+            this.lheslo.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.DarkRed;
+            this.label5.Location = new System.Drawing.Point(338, 489);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.TabIndex = 35;
             // 
             // FormCreateZamestnanec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 458);
+            this.ClientSize = new System.Drawing.Size(542, 615);
+            this.Controls.Add(this.lheslo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lvypis);
+            this.Controls.Add(this.lmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ptoj);
             this.Controls.Add(this.work);
             this.Controls.Add(this.gru);
@@ -329,10 +456,6 @@
         private System.Windows.Forms.Label group;
         private System.Windows.Forms.Label workgroup;
         private System.Windows.Forms.Label project;
-        private System.Windows.Forms.ComboBox comboGroup;
-        private System.Windows.Forms.ComboBox comboWork;
-        private System.Windows.Forms.ComboBox comboProject;
-        private System.Windows.Forms.ComboBox comboSex;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textLast;
         private System.Windows.Forms.TextBox textAddress;
@@ -341,9 +464,25 @@
         private System.Windows.Forms.Label prie;
         private System.Windows.Forms.Label adre;
         private System.Windows.Forms.Label rodn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboGroup;
+        private System.Windows.Forms.ComboBox comboWork;
+        private System.Windows.Forms.ComboBox comboProject;
+        private System.Windows.Forms.ComboBox comboSex;
         private System.Windows.Forms.Label pohl;
         private System.Windows.Forms.Label gru;
         private System.Windows.Forms.Label work;
         private System.Windows.Forms.Label ptoj;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lvypis;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lmail;
+        private System.Windows.Forms.Label lheslo;
+        private System.Windows.Forms.Label label5;
     }
 }

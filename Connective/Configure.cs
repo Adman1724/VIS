@@ -20,7 +20,7 @@ namespace Connective
             public static int NESCHOPENKAREAD = 0;
             public static int NEPRITOMNOSTREAD = 0;
             public static int HISTORIA_PRISTUPUREAD = 0;
-            public static int HARDWAREREAD = 0;
+            public static int HARDWAREREAD = 1;
         }
     
 }

@@ -21,9 +21,9 @@ namespace MAJ0101_Web
         protected void Page_Load(object sender, EventArgs e)
         {
             HardwareFactory hardwareFactory = new HardwareFactory();
-            HardwareGateway<Hardware> hg = (HardwareGateway<Hardware>)hardwareFactory.GetHardware();
 
-            hc = hg.Select();
+
+            hc = hardwareFactory.GetHardware().Select();
             Collection<string> hardwareStrings = new Collection<string>();
             foreach (Hardware h in hc)
             {

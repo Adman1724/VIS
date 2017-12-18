@@ -33,7 +33,7 @@
                </div>
 
 
-               <asp:Button ID="uploadButton" CssClass="card_right_element rateConfirmButton" runat="server" Text="Upload Error Report" OnClick="uploadButton_Click1" />
+               <asp:Button ID="uploadButton" CssClass="card_right_element rateConfirmButton" runat="server" Text="Upload" OnClick="uploadButton_Click1" />
                
 
     </asp:Content>

@@ -28,3 +28,4 @@ E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.Form
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Forms.FormReportError.resources
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\Connective.exe
 E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\bin\Debug\Connective.pdb
+E:\Skola\5.semester\VIS\VIS\program\MAJ0101\MAJ0101\obj\Debug\MAJ0101.Form1.resources

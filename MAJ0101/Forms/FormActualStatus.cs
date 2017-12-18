@@ -93,26 +93,33 @@ namespace MAJ0101.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FormEditZamestnanc c = new FormEditZamestnanc();
-            
-            
             Active t = GetSelectedData();
-            foreach (var i in zamestananec)
+            if (t != null)
             {
-                if (t.Name.Equals(i.Name, StringComparison.Ordinal) && t.Surname.Equals(i.LastName, StringComparison.Ordinal))
+                FormEditZamestnanc c = new FormEditZamestnanc();
+
+
+
+                foreach (var i in zamestananec)
                 {
 
-                    if (c.OpenRecord(i.RecordId))
+                    if (t.Name.Equals(i.Name, StringComparison.Ordinal) && t.Surname.Equals(i.LastName, StringComparison.Ordinal))
                     {
-                        c.Show();
 
+                        if (c.OpenRecord(i.RecordId))
+                        {
+                            c.Show();
+
+                        }
+                        break;
                     }
-                    break;
+
+
+
                 }
-
             }
+            else MessageBox.Show("Choose dates!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -205,16 +212,19 @@ namespace MAJ0101.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (pracoviskoCombo.Text != null) { 
             FormReportError a = new FormReportError();
-            foreach(var i in pracovisko)
+            foreach (var i in pracovisko)
             {
-                if(i.Name.Equals(pracoviskoCombo.Text, StringComparison.Ordinal))
+                if (i.Name.Equals(pracoviskoCombo.Text, StringComparison.Ordinal))
                 {
                     a.loadHardware(i.RecordId);
                     break;
                 }
             }
             a.Show();
+        }
+        else MessageBox.Show("Choose dates!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void gridAktivita_CellContentClick(object sender, DataGridViewCellEventArgs e)

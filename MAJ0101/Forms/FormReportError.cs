@@ -2,6 +2,7 @@
 using Connective.Factory;
 using Connective.Tables;
 using Connective.TablesGateway;
+using Connective.XMLGateway;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,8 +23,8 @@ namespace MAJ0101.Forms
         public FormReportError()
         {
             HardwareFactory hardwareFactory = new HardwareFactory();
-            HardwareGateway<Hardware> hg = (HardwareGateway<Hardware>)hardwareFactory.GetHardware();
-            h = hg.Select();
+           
+            h = hardwareFactory.GetHardware().Select();
             InitializeComponent();
 
         }
@@ -53,21 +54,22 @@ namespace MAJ0101.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            foreach (var i in h)
-            {
-                if (i.Name.Equals(comboBox1.Text, StringComparison.Ordinal))
+            if (textBox1.Text!= null&&comboBox1.SelectedIndex!=null) { 
+                foreach (var i in h)
                 {
-                    p.IdHardware = i.RecordId;
+                    if (i.Name.Equals(comboBox1.Text, StringComparison.Ordinal))
+                    {
+                        p.IdHardware = i.RecordId;
+                    }
                 }
-            }
             DateTime d = DateTime.Now;
             p.Date = d;
             p.repair = false;
             PoruchaFactory poruchaFactory = new PoruchaFactory();
             PoruchaGateway<Porucha> pg = (PoruchaGateway<Porucha>)poruchaFactory.GetPorucha();
             pg.Insert(p);
-            Close();
+            Close(); }
+            else MessageBox.Show("Choose dates!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
     }

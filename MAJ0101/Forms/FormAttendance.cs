@@ -98,8 +98,9 @@ namespace MAJ0101.Forms
                 {
                     ZamestnanecFactory zamestnanecFactory = new ZamestnanecFactory();
                     ZamestnanecGateway<Zamestnanec> zg = (ZamestnanecGateway<Zamestnanec>)zamestnanecFactory.GetZamestnanec();
-
+                    if(s<k||i!=null)
                     result = zg.CheckEmp(i.RecordId, s, k,null);
+                    else MessageBox.Show("Choose dates!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             

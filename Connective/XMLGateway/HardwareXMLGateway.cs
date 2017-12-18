@@ -30,7 +30,7 @@ namespace Connective.XMLGateway
 
         public XElement Insert(Hardware Hardware)
         {
-            XElement result = new XElement("Hardware",
+            XElement result = new XElement("Hardwares",
                 new XAttribute("Id", Hardware.RecordId),
                 new XAttribute("Name", Hardware.Name),
                 new XAttribute("Descripe", Hardware.Descripe),
@@ -46,19 +46,20 @@ namespace Connective.XMLGateway
             XDocument xDoc = XDocument.Load(Paths.FilePath);
             Collection<T> Hardwares = new Collection<T>();
 
-            List<XElement> elements = xDoc.Descendants("Hardwares").Descendants("Hardware").ToList();
+            List<XElement> elements = xDoc.Descendants("Hardware").Descendants("Hardwares").ToList();
             foreach (var element in elements)
             {
                 var res = 0;
-                Hardware Hardware = new Hardware()
+                Hardware hardware = new Hardware()
                 {
+                  
+                    RecordId = int.TryParse(element.Attribute("Id").Value, out res) == true ? res : 0,
                     Name = element.Attribute("Name").Value,
-                    RecordId = int.TryParse(element.Attribute("id").Value, out res) == true ? res : 0,
-                    IpAddress = element.Attribute("IpAddress").Value,
-                    WorkGroup= int.TryParse(element.Attribute("WorkGroup").Value, out res) == true ? res : 0,
                     Descripe = element.Attribute("Descripe").Value,
-
+                    IpAddress = element.Attribute("IpAddress").Value,
+                    WorkGroup = int.TryParse(element.Attribute("WorkGroup").Value, out res) == true ? res : 0,
                 };
+                Hardwares.Add((T)hardware);
                 
             }
 
